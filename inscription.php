@@ -22,6 +22,7 @@
 
             <label for="passwordConfirm">Confirmation du mot de passe:</label>
             <input type="password" name="passwordConfirm"><br />
+            <button type="submit" name="submit" value="Inscription"></button>
         </form>
     </body>
 </html>
