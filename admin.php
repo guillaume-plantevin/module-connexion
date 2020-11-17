@@ -7,9 +7,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Administration des utilisateurs</title>
 </head>
 <body>
+    <p>Voici la liste des utilisateurs du site:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Login</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
     
 </body>
 </html>

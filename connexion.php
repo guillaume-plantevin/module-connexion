@@ -8,7 +8,13 @@
     <title>Connexion</title>
 </head>
 <body>
-    <form action="" method="post"></form>
+    <form action="" method="post">
+        <label for="">Login:</label>
+        <input type="text" name="login" id="login"><br />
+
+        <label for="password">Mot de passe:</label>
+        <input type="password" name="password" id="password"><br />
+    </form>
 
     
     
