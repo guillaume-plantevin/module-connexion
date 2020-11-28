@@ -1,1 +1,12 @@
 .DS_Store
+.gitignore
+.vscode
+,git
+NOTE_IMPORTANTE.txt
+tests/*
+test_pdo.php
+test_header/*
+footer.html
+header.html
+fonts/un-used
+images/un-used

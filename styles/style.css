@@ -1,14 +1,80 @@
+@font-face {
+    font-family: 'titleFont';
+    src: url("../fonts/Queen\ of\ Clubs.otf") format("truetype");
+}
+.flex {
+    display: flex;
+}
+.logo {
+    font-size: 2.5em;
+}
+h1 {
+    text-align: center;
+    font-size: 5em;
+    font-family: 'titleFont';
+    color: white;
+}
+.siteHeader {
+    background: rgb(0, 0, 0);
+}
+.row h1 {
+    color: white;
+
+}
+#submitButton {
+    margin-top: 2em;
+    border-radius: 1em;
+}
+main a {
+    background: rgb(255, 78, 78);
+    color: white;
+    padding: .2em .5em;
+}
+main>p{
+    /* color: white; */
+}
+main p {
+    /* background: rgba(0, 0, 0, 0.822); */
+
+}
+.error {
+    margin: 1em;
+    background-color: red;
+    width: auto;
+    padding: 1em .5em;
+    /* border: 2px solid rgba(0, 0, 0, 0.637); */
+    border-radius: 15px;
+    color:white;
+    font-size: sans-serif;
+    text-transform:uppercase;
+}
+#presentation {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    background-color: aqua;
+    background: center no-repeat url(../images/pexels-denise-duplinski-3819561.jpg);
+    background-size: cover;
+}
+footer {
+    background: black;
+    color: white;
+}
+footer p {
+    position: relative;
+    bottom: 0;
+    text-align: right;
+}
+input:hover {
+    color:black;
+}
 label {
-    font-size: 1.3em;
-    display: inline-block;
-    width: 20%;
-    /* color: red; */
-    /* border: 2px solid black; */
-    padding: .7em 1em;
+    font-size: 1.2em;
+    color: black;
 }
-input {
-    height: 2.2em;
+table, th, td{
+    border: 1px solid black;
 }
-form {
-    background-color: rgba(128, 128, 128, 0.623);
+tr:nth-child(2n) {
+    background: rgba(128, 128, 128, 0.233);
 }
