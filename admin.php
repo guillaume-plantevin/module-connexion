@@ -5,21 +5,21 @@
     $stmt = $pdo->query("SELECT * FROM utilisateurs");
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    // cacher inscription et connexion
+    if (isset($_SESSION['login'])) 
+        $invisible = true;
+    else
+        $invisible = false;
+
     // Si l'utilisateur n'a pas le statut/role 1
     if ($_SESSION['role'] != 1)
         $errorMsg = "Cette page n'est visible que par l'administrateur.";
-    // cacher inscription et connexion
-    if (isset($_SESSION['login']))
-        $invisible = true;
-    else
-        $invisble = false;
 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
-        <link rel="stylesheet" href="styles/style_ullman.css">
         <link rel="stylesheet" href="styles/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,7 @@
         <main container class="siteContent">
             <?php 
                 if (isset($errorMsg)):
-                    echo $errorMsg;
+                    echo '<p class="error">' . $errorMsg . '</p>';
                 else:
             ?>
             <p>Voici la liste des utilisateurs du site:</p>
@@ -78,18 +78,16 @@
                             echo($row['password']);
                             echo("</td><td>");
                             if ($row['role'] == 1)
-                                echo 'administrateur';
+                                echo 'administrateur (' . $row['role'] . ')';
                             else
-                                echo 'utilisateur';
-                            // echo($row['role']);
+                                echo 'utilisateur (' . $row['role'] . ')';
                             echo("</td></tr>\n");
                         }
                     ?>
                 </tbody>
             </table>
-            <?php 
-                endif;
-            ?>
+            <!-- fin du else -->
+            <?php endif;?>
         </main>
         <footer container class="siteFooter">
             <p>Guillaume Plantevin @ Coding School 2020, LaPlateforme_</p>

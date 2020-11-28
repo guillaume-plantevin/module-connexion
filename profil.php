@@ -1,16 +1,25 @@
 <?php
     session_start();
 
-    if (isset($_SESSION['login']))
+    // echo '<pre>';
+    // print_r($_SESSION);
+    // echo '</pre>';
+
+    // echo '<pre>';
+    // print_r($_POST);
+    // echo '</pre>';
+
+    if ( isset($_SESSION['login']) )
         $invisible = true;
-    else
-        $invisble = false;
+    else {
+        $invisible = false;
+        $errorMsg = "Cette page vous permettra de changer vos données personnelles, merci de vous connecter tout d'abord.";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
-        <link rel="stylesheet" href="styles/style_ullman.css">
         <link rel="stylesheet" href="styles/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +45,12 @@
             </div>
         </header>
         <main container class="siteContent">
-
+            <?php 
+                if (isset($errorMsg)):
+                    echo '<p class="error">' . $errorMsg . '</p>';
+                else:
+            ?>
+                <h4>Bienvenue parmis nous, <?= '<span style="text-transform:capitalize">' . $_SESSION['prenom'] . '</span>';?></h4>
             <p>Si vous souhaitez mettre à jour vos informations personnelles, 
                 il vous suffit de changer celles fournies ci-dessous.
             </p>
@@ -54,8 +68,9 @@
                 <input type="text" name="password" id="password" value=<?=$_SESSION['password'];?>><br />
 
                 <input type="submit" id="submitButton" value="Valider">
-
+                
             </form>
+            <?php endif;?>
         </main>
         <footer container class="siteFooter">
             <p>Guillaume Plantevin @ Coding School 2020, LaPlateforme_</p>
