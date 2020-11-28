@@ -1,8 +1,5 @@
 <?php
     require_once "pdo.php";
-    // echo '<pre>';
-    // print_r($_POST);
-    // echo '</pre>';
 
     // BORDEL DES CHEMINS DE IF/ELSE => pas certain en fait...
     if ( isset($_POST['submit']) ) {
@@ -59,7 +56,6 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
-        <link rel="stylesheet" href="styles/style_ullman.css">
         <link rel="stylesheet" href="styles/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

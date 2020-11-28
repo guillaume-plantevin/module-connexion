@@ -2,79 +2,137 @@
     font-family: 'titleFont';
     src: url("../fonts/Queen\ of\ Clubs.otf") format("truetype");
 }
+/* ===================== GENERAL ========================= */
+
+.masthead {
+    background-color: #eee;
+    padding: 50px 0;
+  }
+@media (max-width: 40em) {
+    .masthead {
+        padding: 100px 3em;
+    }
+    label {
+        padding: 0 1em;
+    }
+}
+.masthead-title {
+    margin-top: 0;
+  }
+/* ===================== GENERIC ========================= */
 .flex {
     display: flex;
 }
-.logo {
-    font-size: 2.5em;
+.white {
+    color: white;
 }
+.tCentered {
+    text-align: center;
+}
+.padding {
+    padding: 0 2em;
+}
+/* ===================== HEADER ========================== */
+.siteHeader {
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    padding: .1em 0;
+    font-size: 2.5em;
+    /* margin-bottom: 0; */
+}
+.nav { 
+    text-align: right; 
+}
+
+.nav li {
+    display: inline;
+    line-height: 4;
+    margin-left: 25px;
+}
+.nav li:first-of-type {
+    margin-left: 0;
+}
+.nav li {
+    text-transform: uppercase;
+}
+/* =====================  MAIN  ========================== */
+.siteContent {
+    padding: 50px 0;
+}
+  
 h1 {
     text-align: center;
     font-size: 5em;
     font-family: 'titleFont';
     color: white;
 }
-.siteHeader {
-    background: rgb(0, 0, 0);
-}
-.row h1 {
-    color: white;
-
-}
 #submitButton {
     margin-top: 2em;
     border-radius: 1em;
 }
 main a {
-    background: rgb(255, 78, 78);
+    background: rgba(255, 255, 255, 0.425);
     color: white;
-    padding: .2em .5em;
-}
-main>p{
-    /* color: white; */
-}
-main p {
-    /* background: rgba(0, 0, 0, 0.822); */
-
+    padding: .3em .5em;
 }
 .error {
     margin: 1em;
     background-color: red;
     width: auto;
     padding: 1em .5em;
-    /* border: 2px solid rgba(0, 0, 0, 0.637); */
     border-radius: 15px;
     color:white;
     font-size: sans-serif;
     text-transform:uppercase;
 }
-#presentation {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    background-color: aqua;
-    background: center no-repeat url(../images/pexels-denise-duplinski-3819561.jpg);
-    background-size: cover;
-}
-footer {
-    background: black;
-    color: white;
-}
-footer p {
-    position: relative;
-    bottom: 0;
-    text-align: right;
+label {
+    font-size: 1.2em;
+    /* padding: 0 1em; */
+    color: black;
 }
 input:hover {
     color:black;
 }
-label {
-    font-size: 1.2em;
-    color: black;
-}
+/* =====================  ADMIN  ========================== */
+
 table, th, td{
     border: 1px solid black;
 }
 tr:nth-child(2n) {
     background: rgba(128, 128, 128, 0.233);
+}
+/* =====================  FOOTER  ========================== */
+footer {
+    background: black;
+    color: white;
+    text-align: right;
+    padding: .5em 0;
+    position: relative;
+    bottom: 0;
+    /* border-top: 1px solid #eee; */
+    font-size: .9em;
+}
+/* =====================  PAGE: INDEX  ========================== */
+#presentation {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    background: center no-repeat url(../images/pexels-denise-duplinski-3819561.jpg);
+    background-size: cover;
+}
+
+#presentation h3 {
+    margin: 1em 0;
+    padding: 0 1.2em;
+}
+#presentation p {
+    font-size: 1.1em;
+    padding: 1em 2em;
+}
+#presentation div {
+    margin-top: 2em;
+    background: rgba(31, 31, 31, 0.397);
 }

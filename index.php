@@ -1,8 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
-        <link rel="stylesheet" href="styles/style_ullman.css">
         <link rel="stylesheet" href="styles/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,14 +26,15 @@
         <main container class="siteContent">
             <section id="presentation">
                 <h1>NU-ORLEANS</h1>
-                <h3>Bienvenue sur le site du Jazz Club de Marseille!</h3>
-                <p>
-                    Nous organisons des concerts, rencontres et worshops avec des musiciens de toute l'Europe.
-                    Nos soirées ont lieux principalement le Vendredi et le Samedi soir.
-                </p>
-                <p>
-                    Si vous souhaitez nous rejoindre, vous pouvez passer par la barre de navigation ou suivre ce <a href="inscription.php">lien</a>.
-                </p>
+                <div>
+                    <h3 class="white tCentered">Bienvenue sur le site du Jazz Club de Marseille!</h3>
+                    <p class="padding white">
+                        Nous organisons des concerts, rencontres et worshops avec des musiciens de toute l'Europe.
+                        Nos soirées ont lieux principalement le Vendredi et le Samedi soir.
+                    </p>
+                    <p class="padding white">Si vous souhaitez vous inscrire pour nous rejoindre, vous pouvez passer par la barre de navigation ou suivre ce <a href="inscription.php">lien.</a>
+                    </p>
+                </div>
             </section>
         </main>
         <footer container class="siteFooter">
